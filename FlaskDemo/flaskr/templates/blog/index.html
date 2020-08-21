@@ -1,0 +1,97 @@
+{% extends 'base.html' -%}
+{% from 'blog/blogmacros.html' import show_footer, comments_html, to_comment %}
+{% from 'macros.html' import paginate_html %}
+
+{%- block style -%}
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/index.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/footer.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/pagination.css') }}">
+{%- endblock -%}
+
+{%- block script -%}
+        <script src="{{ url_for('static',filename='js/xhrutil.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/footer.js') }}"></script>
+{%- endblock -%}
+
+{%- block header %}
+    <h1>{% block title %}Posts{% endblock %}</h1>
+    <form>
+    <label for="title_search" >Title:</label>
+    <input id="title_search" name="search" type="search" value="{{ request.args.get('search') or search if search else '' }}"
+           autofocus="autofocus" placeholder="title of post to search" >
+    <input type="submit" value="Search">
+    </form>
+  {%- if g.user %}
+    <a class="action" href="{{ url_for('blog.create') }}">New</a>
+  {% endif -%}
+{% endblock -%}
+
+{%- block content %}
+    <div class="tags">
+        <span class="tag">Tags:</span>
+        {%- for tag in tags if tags %}
+        <a class="tag" href="{{ url_for('blog.index', tag_id=tag['id']) }}">#{{tag['name']}}</a>
+        {% endfor-%}
+    </div>
+    {%- for post in posts if posts %}
+    <article class="post" id="{{ post['id'] }}" >
+        <header>
+          <div>
+            <h1><a class="action" href="{{ url_for('blog.detail', pid=post['id']) }}">{{ post['title'] }}</a></h1>
+            <div class="about"> by {{ post['username'] }} on {{ post['created']|tojson|toLocaleString }}</div>
+{#            <div class="about"> by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d %H:%M:%S') }}</div> #}
+{#            <div class="about"> by {{ post['username'] }} on <script >document.write(new Date({{ post['created']|tojson }}).toLocaleString());</script>  or {{ post['created'] }}</div> #}
+          </div>
+          {%- if g.user['id'] == post['author_id'] -%}
+            <a class="action" href="{{ url_for('blog.update', pid=post['id']) }}">Edit</a>
+          {%- endif -%}
+        </header>
+
+        <p class="body">{{ post['body'] }}</p>
+
+        {%- if post.imgs -%}
+        <div class="img-box" id="{{post.imgs.id}}">
+            <img src="{{url_for('blog.show_photo',filename=post.imgs.name)}}"></img>
+            <span>{{ post.imgs.name }}</span>
+        </div>
+        {%- endif -%}
+
+        {{- show_footer(post, tags) -}}
+        {{- comments_html(comments, post) -}}
+
+        {{- to_comment(post) -}}
+
+      </article>
+      {%- if not loop.last %}
+        <hr>
+      {% endif -%}
+    {% endfor -%}
+    {{ paginate_html(pagination,'blog.index') }}
+{% endblock -%}
+
+
+{% block myScript %}
+<!--方案二：直接在模版里使用变量posts(支持字典类型(需要使用tojson过滤器转化为字符串)和sqlite3.Row类型)，调用js的函数日期toLocaleString()-->
+{#
+<script type="text/javascript">
+
+  {% for post in posts %}
+    document.getElementById({{ post['id']|tojson }}).getElementsByClassName('about')[0].innerHTML=
+      "by "+{{ post['username']|tojson }}+" on " + new Date({{ post['created']|tojson }}).toLocaleString();
+  {% endfor %}
+
+  {% for comment in comments %}
+    document.getElementById('comment'+{{ comment['id']|tojson }}).getElementsByClassName('comment_about')[0].innerHTML=
+      "by "+{{ comment['username']|tojson }}+" on " + new Date({{ comment['createdTime']|tojson }}).toLocaleString();
+  {% endfor %}
+
+</script>
+#}
+<!--方案一：通过将模版上下文中的变量posts(字典类型,sqlite3.Row无法直接使用tojson过滤器转化)转化成js变量posts，在外链about.js文件中使用js变量posts.-->
+{#
+<script type="text/javascript">
+  var posts = {{posts|tojson}};
+</script>
+<script defer="true" type="text/javascript" src="{{ url_for('static',filename='js/about.js') }}"></script>
+#}
+{% endblock %}

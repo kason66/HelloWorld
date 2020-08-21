@@ -1,0 +1,22 @@
+.page_nav {
+justify-content: space-around;
+background: white;
+margin: 0.5rem 0 0;
+color: gray;
+}
+
+.pagination {
+align-items: center;
+}
+
+.pagination .page-link {
+padding: 0.2rem 0.5rem;
+}
+
+.pagination .active {
+background: #3373e7;
+border-radius: 2px;
+}
+.pagination .active a{
+color: white;
+}

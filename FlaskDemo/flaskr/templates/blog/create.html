@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% from 'blog/blogmacros.html' import select_tags with context %}
+
+{%- block style -%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/create.css') }}">
+{%- endblock -%}
+
+{% block header %}
+  <h1>{% block title %}New Post{% endblock %}</h1>
+  <a class="action" href="{{ url_for('blog.index') }}">Return</a>
+{% endblock %}
+
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    <label for="title">Title</label>
+    <input name="title" id="title" value="{{ request.form['title'] }}" autofocus="autofocus" required >
+    <label for="body">Body</label>
+    <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
+    {{ select_tags() }}
+    <input type="file" name="file">
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
+

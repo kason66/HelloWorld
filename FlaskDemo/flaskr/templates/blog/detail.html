@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% from 'blog/blogmacros.html' import show_footer, to_comment %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/detail.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/footer.css') }}">
+{% endblock %}
+
+{%- block script -%}
+        <script src="{{ url_for('static',filename='js/xhrutil.js') }}"></script>
+        <script src="{{ url_for('static',filename='js/footer.js') }}"></script>
+{%- endblock -%}
+
+{% block header %}
+    <h1>{% block title %}Post Detail{% endblock %}</h1>
+    <a class="action" href="{{ url_for('blog.index') }}">Return</a>
+{% endblock %}
+
+{% block content %}
+    <form method="post" onsubmit="return false;">
+        <p class="title"> {{ post['title'] }} <span class="about">{{ post['created']|tojson|toLocaleString }}</span></p>
+        <p class="body"> {{ post['body'] }} </p>
+
+        {% for img in post['imgs'].split(',') if img_show %}
+        <div class="img-box" id="{{img}}">
+            <img src="{{url_for('blog.show_photo',filename=img_show.name)}}"></img>
+            <span>{{ img_show.name }}</span>
+        </div>
+        {% endfor %}
+        {{ show_footer(post, tags) }}
+    </form>
+    {{ to_comment(post) }}
+{% endblock %}

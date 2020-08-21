@@ -1,0 +1,17 @@
+.content form {
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    }
+
+.content label[for~=username], .content label[for~=password] {
+    margin: 0 auto;
+    }
+
+.content input[id~=username], .content input[id~=password] {
+    width: 20rem;
+    height: 16px;
+    margin: 0 0 0.6rem 0.4rem;
+    border-radius: 2px;
+    border:1px solid #ccc;
+    }

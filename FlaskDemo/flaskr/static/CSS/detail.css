@@ -1,0 +1,27 @@
+.content form {
+    margin: 0;
+}
+
+form .title {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+form .about {
+    color: #aaa;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+.tags {
+    color: #333;
+}
+
+.tag {
+    margin: auto 0.2rem;
+    font-size: 0.9rem;
+}
+

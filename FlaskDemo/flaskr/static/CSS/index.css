@@ -1,0 +1,40 @@
+.content header form {margin:0; flex-direction: row; align-items: center;}
+.content header form label {margin: 0rem; font-weight: normal; font-size: 1rem; color: #333;}
+.content header form input[id='title_search'] {margin: 0rem 0.2rem; width: 16rem;}
+
+.tags {
+    margin-bottom: 0.5rem;
+}
+.tags span:first-of-type {
+    color: #333;
+}
+.tag {
+    margin: auto 0.2rem;
+    font-size: 0.9rem;
+}
+
+.post > header { display: flex; align-items: center; }
+.post > header > div:first-of-type { flex: None; }
+.post > header h1 { font-size: 1.5rem; margin-bottom: 0; display: flex; }
+.post > header h1 a { flex: None; padding: 0; }
+.post > header > .action { margin-left: auto; font-size: 1rem;}
+
+.post .about, .comment_about { color: #aaa; font-style: italic; font-size: 0.85rem; }
+
+.post .body {
+    margin-bottom: 0.5rem;
+    }
+
+
+.comments {
+    font-size: 0.9rem ; color: #333; border-top: 1px dashed darkgray; padding-top: 0.2rem; margin-top: 0.2rem;
+}
+
+.comment_about {
+    margin: 0rem 0rem 0rem;
+    font-size: 0.85rem;
+}
+.comment_body {
+    margin: 0.5rem 1rem;
+}
+

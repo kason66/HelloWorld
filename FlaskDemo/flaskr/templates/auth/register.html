@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block style %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/auth.css') }}">
+{% endblock %}
+
+{% block header %}
+    <h1>{% block title %}Register{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <label for="username">Username<input name="username" id="username" required></label>
+        <label for="password">Password<input type="password" name="password" id="password" required></label>
+        <input type="submit" value="Register">
+    </form>
+{% endblock %}

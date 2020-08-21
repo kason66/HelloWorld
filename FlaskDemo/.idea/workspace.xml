@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8270d82d-07ab-4950-81ff-49718ad0388d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="FlaskDemo" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WTPU3GJoIwHOAoqfjKGbA53Aus" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings>
+        <option name="useSoftWraps" value="true" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/instance" />
+      <recent name="$PROJECT_DIR$/" />
+      <recent name="$PROJECT_DIR$/flaskr/static" />
+      <recent name="$PROJECT_DIR$/flaskr/static/CSS" />
+      <recent name="$PROJECT_DIR$/flaskr" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.run">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FlaskDemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flaskr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flaskr/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="blog" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FlaskDemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flaskr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flaskr/blog.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FlaskDemo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flaskr" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.__init__" />
+      <item itemvalue="Python.blog" />
+      <item itemvalue="Python.run" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.blog" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8270d82d-07ab-4950-81ff-49718ad0388d" name="Default Changelist" comment="" />
+      <created>1579170623558</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579170623558</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="requirements.txt" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="321" y="98" key="#Notifications" timestamp="1582034095951">
+      <screen x="0" y="23" width="1440" height="808" />
+    </state>
+    <state x="321" y="98" key="#Notifications/0.23.1440.808@0.23.1440.808" timestamp="1582034095951" />
+    <state x="321" y="98" key="#Notifications/0.23.1440.811@0.23.1440.811" timestamp="1579174888505" />
+    <state x="369" y="89" width="1071" height="702" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584619642080">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="369" y="89" width="1071" height="702" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.811@0.23.1440.811" timestamp="1584619642080" />
+    <state x="185" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.816@0.23.1440.816" timestamp="1582684819250" />
+    <state x="527" y="242" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584624070772">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="527" y="242" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.811@0.23.1440.811" timestamp="1584624070772" />
+    <state x="527" y="242" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.812@0.23.1440.812" timestamp="1584598442212" />
+    <state x="436" y="110" width="894" height="636" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1584375373569">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="436" y="110" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.808@0.23.1440.808" timestamp="1582034016941" />
+    <state x="436" y="110" width="894" height="636" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.23.1440.811@0.23.1440.811" timestamp="1584375373569" />
+    <state x="487" y="270" width="468" height="471" key="#com.intellij.tools.ToolEditorDialog" timestamp="1579170818649">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="487" y="270" width="468" height="471" key="#com.intellij.tools.ToolEditorDialog/0.23.1440.811@0.23.1440.811" timestamp="1579170818649" />
+    <state x="632" y="197" width="739" height="427" key="#xdebugger.XInspectDialog" timestamp="1582696213140">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state x="632" y="197" width="739" height="427" key="#xdebugger.XInspectDialog/0.23.1440.814@0.23.1440.814" timestamp="1582696213140" />
+    <state x="784" y="255" key="#xdebugger.evaluate" timestamp="1584707869128">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="784" y="255" key="#xdebugger.evaluate/0.23.1440.811@0.23.1440.811" timestamp="1584707869128" />
+    <state x="766" y="135" key="#xdebugger.evaluate/0.23.1440.812@0.23.1440.812" timestamp="1583173452402" />
+    <state x="456" y="155" key="DBNavigator.ConnectionInfoDialog" timestamp="1587379678302">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="456" y="155" key="DBNavigator.ConnectionInfoDialog/0.23.1440.811@0.23.1440.811" timestamp="1587379678302" />
+    <state x="236" y="125" key="DBNavigator.DatasetFilterDialog" timestamp="1584628690670">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="236" y="125" key="DBNavigator.DatasetFilterDialog/0.23.1440.811@0.23.1440.811" timestamp="1584628690670" />
+    <state x="236" y="125" key="DBNavigator.DatasetFilterDialog/0.23.1440.812@0.23.1440.812" timestamp="1583655831298" />
+    <state x="559" y="258" key="DBNavigator.DatasetRecordEditorDialog" timestamp="1583655885813">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="559" y="258" key="DBNavigator.DatasetRecordEditorDialog/0.23.1440.812@0.23.1440.812" timestamp="1583655885813" />
+    <state x="248" y="75" key="DBNavigator.ProjectSettingsDialog" timestamp="1587379315159">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state x="248" y="75" key="DBNavigator.ProjectSettingsDialog/0.23.1440.811@0.23.1440.811" timestamp="1582294938294" />
+    <state x="248" y="75" key="DBNavigator.ProjectSettingsDialog/0.23.1440.812@0.23.1440.812" timestamp="1583052168209" />
+    <state x="248" y="75" key="DBNavigator.ProjectSettingsDialog/0.23.1440.814@0.23.1440.814" timestamp="1587379315159" />
+    <state x="591" y="292" key="DBNavigator.ResultSetRecordViewerDialog" timestamp="1582102298194">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="591" y="292" key="DBNavigator.ResultSetRecordViewerDialog/0.23.1440.811@0.23.1440.811" timestamp="1582102298194" />
+    <state width="1440" height="437" key="DebuggerActiveHint" timestamp="1584632894957">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state width="1440" height="437" key="DebuggerActiveHint/0.23.1440.811@0.23.1440.811" timestamp="1584632894957" />
+    <state width="1440" height="437" key="DebuggerActiveHint/0.23.1440.812@0.23.1440.812" timestamp="1583677854356" />
+    <state width="1440" height="438" key="DebuggerActiveHint/0.23.1440.814@0.23.1440.814" timestamp="1582696342284" />
+    <state x="811" y="357" key="FileChooserDialogImpl" timestamp="1583938969632">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="811" y="357" key="FileChooserDialogImpl/0.23.1440.811@0.23.1440.811" timestamp="1583938969632" />
+    <state width="1077" height="268" key="GridCell.Tab.0.bottom" timestamp="1585228064990">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1077" height="377" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1584769454699" />
+    <state width="1077" height="268" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1585228064990" />
+    <state width="1077" height="268" key="GridCell.Tab.0.bottom/0.23.1440.814@0.23.1440.814" timestamp="1585118149672" />
+    <state width="1149" height="256" key="GridCell.Tab.0.bottom/0.23.1440.816@0.23.1440.816" timestamp="1582685173192" />
+    <state width="1077" height="268" key="GridCell.Tab.0.center" timestamp="1585228064988">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1077" height="377" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1584769454698" />
+    <state width="1077" height="268" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1585228064988" />
+    <state width="1077" height="268" key="GridCell.Tab.0.center/0.23.1440.814@0.23.1440.814" timestamp="1585118149671" />
+    <state width="1149" height="256" key="GridCell.Tab.0.center/0.23.1440.816@0.23.1440.816" timestamp="1582685173191" />
+    <state width="1077" height="268" key="GridCell.Tab.0.left" timestamp="1585228064988">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1077" height="377" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1584769454697" />
+    <state width="1077" height="268" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1585228064988" />
+    <state width="1077" height="268" key="GridCell.Tab.0.left/0.23.1440.814@0.23.1440.814" timestamp="1585118149671" />
+    <state width="1149" height="256" key="GridCell.Tab.0.left/0.23.1440.816@0.23.1440.816" timestamp="1582685173190" />
+    <state width="1077" height="268" key="GridCell.Tab.0.right" timestamp="1585228064989">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1077" height="377" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1584769454699" />
+    <state width="1077" height="268" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1585228064989" />
+    <state width="1077" height="268" key="GridCell.Tab.0.right/0.23.1440.814@0.23.1440.814" timestamp="1585118149672" />
+    <state width="1149" height="256" key="GridCell.Tab.0.right/0.23.1440.816@0.23.1440.816" timestamp="1582685173191" />
+    <state width="1077" height="268" key="GridCell.Tab.1.bottom" timestamp="1585228064992">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1077" height="377" key="GridCell.Tab.1.bottom/0.23.1440.811@0.23.1440.811" timestamp="1584769493424" />
+    <state width="1077" height="268" key="GridCell.Tab.1.bottom/0.23.1440.812@0.23.1440.812" timestamp="1585228064992" />
+    <state width="1149" height="187" key="GridCell.Tab.1.bottom/0.23.1440.814@0.23.1440.814" timestamp="1583940952067" />
+    <state width="1149" height="256" key="GridCell.Tab.1.bottom/0.23.1440.816@0.23.1440.816" timestamp="1582685173194" />
+    <state width="1077" height="268" key="GridCell.Tab.1.center" timestamp="1585228064991">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1077" height="377" key="GridCell.Tab.1.center/0.23.1440.811@0.23.1440.811" timestamp="1584769493423" />
+    <state width="1077" height="268" key="GridCell.Tab.1.center/0.23.1440.812@0.23.1440.812" timestamp="1585228064991" />
+    <state width="1149" height="187" key="GridCell.Tab.1.center/0.23.1440.814@0.23.1440.814" timestamp="1583940952066" />
+    <state width="1149" height="256" key="GridCell.Tab.1.center/0.23.1440.816@0.23.1440.816" timestamp="1582685173193" />
+    <state width="1077" height="268" key="GridCell.Tab.1.left" timestamp="1585228064990">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1077" height="377" key="GridCell.Tab.1.left/0.23.1440.811@0.23.1440.811" timestamp="1584769493423" />
+    <state width="1077" height="268" key="GridCell.Tab.1.left/0.23.1440.812@0.23.1440.812" timestamp="1585228064990" />
+    <state width="1149" height="187" key="GridCell.Tab.1.left/0.23.1440.814@0.23.1440.814" timestamp="1583940952066" />
+    <state width="1149" height="256" key="GridCell.Tab.1.left/0.23.1440.816@0.23.1440.816" timestamp="1582685173192" />
+    <state width="1077" height="268" key="GridCell.Tab.1.right" timestamp="1585228064991">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1077" height="377" key="GridCell.Tab.1.right/0.23.1440.811@0.23.1440.811" timestamp="1584769493424" />
+    <state width="1077" height="268" key="GridCell.Tab.1.right/0.23.1440.812@0.23.1440.812" timestamp="1585228064991" />
+    <state width="1149" height="187" key="GridCell.Tab.1.right/0.23.1440.814@0.23.1440.814" timestamp="1583940952066" />
+    <state width="1149" height="256" key="GridCell.Tab.1.right/0.23.1440.816@0.23.1440.816" timestamp="1582685173193" />
+    <state x="311" y="167" key="IDE.errors.dialog" timestamp="1584625833275">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="311" y="167" key="IDE.errors.dialog/0.23.1440.811@0.23.1440.811" timestamp="1584625833275" />
+    <state x="180" y="48" key="SettingsEditor" timestamp="1584167596957">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="180" y="48" key="SettingsEditor/0.23.1440.811@0.23.1440.811" timestamp="1584167596957" />
+    <state x="458" y="50" key="SettingsEditor/0.23.1440.812@0.23.1440.812" timestamp="1583944972332" />
+    <state x="180" y="48" key="SettingsEditor/0.23.1440.814@0.23.1440.814" timestamp="1583940946888" />
+    <state width="595" height="402" key="XDebugger.FullValuePopup" timestamp="1584595181029">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state width="595" height="402" key="XDebugger.FullValuePopup/0.23.1440.811@0.23.1440.811" timestamp="1584595181029" />
+    <state width="595" height="402" key="XDebugger.FullValuePopup/0.23.1440.812@0.23.1440.812" timestamp="1583482860358" />
+    <state width="595" height="402" key="XDebugger.FullValuePopup/0.23.1440.814@0.23.1440.814" timestamp="1582696125522" />
+    <state width="595" height="402" key="XDebugger.FullValuePopup/0.23.1440.816@0.23.1440.816" timestamp="1582685506363" />
+    <state x="523" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1587379656933">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="523" y="256" key="com.intellij.ide.util.TipDialog/0.23.1440.808@0.23.1440.808" timestamp="1582030093666" />
+    <state x="523" y="257" key="com.intellij.ide.util.TipDialog/0.23.1440.811@0.23.1440.811" timestamp="1587379656933" />
+    <state x="523" y="257" key="com.intellij.ide.util.TipDialog/0.23.1440.812@0.23.1440.812" timestamp="1583936482290" />
+    <state x="523" y="258" key="com.intellij.ide.util.TipDialog/0.23.1440.814@0.23.1440.814" timestamp="1582699607275" />
+    <state x="378" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582452344830">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="378" y="72" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900@0.0.1440.900" timestamp="1582452344830" />
+    <state x="398" y="174" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1584197018233">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="398" y="174" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.811@0.23.1440.811" timestamp="1584197018233" />
+    <state x="398" y="175" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.814@0.23.1440.814" timestamp="1582697621653" />
+    <state x="398" y="175" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.23.1440.816@0.23.1440.816" timestamp="1582683678512" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1584159045126">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.23.1440.811@0.23.1440.811" timestamp="1584159045126" />
+    <state x="388" y="158" key="search.everywhere.popup" timestamp="1584630028901">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="388" y="158" key="search.everywhere.popup/0.23.1440.811@0.23.1440.811" timestamp="1584630028901" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/flaskr/blog.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint log-stack="true" type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="tags" language="HTML" />
+        <watch expression="request.values" />
+        <watch expression="request.files" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
