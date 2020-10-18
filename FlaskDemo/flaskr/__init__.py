@@ -12,7 +12,7 @@ def create_app(test_config=None):  # 应用工厂函数
     app = Flask(__name__, instance_relative_config=True)
     db_file = 'flaskr.sqlite'
     app.config.from_mapping(
-        SECRET_KEY='dev',
+        SECRET_KEY=b'UO$:4M4\xbdo\xeevR\xccS\xcb$?t\xba\xca\xf6.oY',
         JSONIFY_PRETTYPRINT_REGULAR=True,  # jsonify响应会输出新行、空格和缩进以便于阅读。在调试模式下总是启用的。
         DATABASE=os.path.join(app.instance_path, db_file),
         SQLALCHEMY_DATABASE_URI='/'.join(('sqlite://', app.instance_path, db_file)),
