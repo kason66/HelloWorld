@@ -63,9 +63,33 @@ def login():
                 print('get in redirect and url is {}'.format(request.url_root.rstrip('/') + re_path))
                 return redirect(re_path)
             return redirect(url_for('blog.index'))
+
         flash(error)
 
     return render_template('auth/login.html')
+
+
+# 修改密码
+@bp.route('/forget', methods=('GET', 'POST'))
+def forget():
+
+    if request.method.upper() == 'POST':
+        log_user = User(request.form['username'], request.form['password'])
+        error = None
+
+        user = log_user.get_user()
+
+        if user is None:
+            error = 'Incorrect username.'
+
+        if error is None:
+            log_user.update()
+            flash(u'Password changed successfully, Please login!')
+            return redirect(url_for('auth.login'))
+
+        flash(error)
+
+    return render_template('auth/forget.html')
 
 
 # 在视图函数处理请求前载入当前用户的信息

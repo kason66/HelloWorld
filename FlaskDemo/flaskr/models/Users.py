@@ -67,6 +67,20 @@ class User(Base):
             con.commit()
         return
 
+    def update(self):
+        con = get_db()
+        try:
+            con.execute(
+                'UPDATE user SET  password = ? WHERE username = ?',
+                (generate_password_hash(self.password), self.username)
+            )
+        except BaseException:
+            con.rollback()
+            raise
+        else:
+            con.commit()
+        return
+
 
 # 测试SQLAlchemy的使用是否成功
 def get_users_say():

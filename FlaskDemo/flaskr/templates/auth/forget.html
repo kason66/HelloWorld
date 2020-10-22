@@ -5,14 +5,14 @@
 {% endblock %}
 
 {% block header %}
-    <h1>{% block title %}Log In{% endblock %}</h1>
+    <h1>{% block title %}Changeing Password{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
     <form method="post">
         <label for="username">Username<input name="username" id="username" required></label>
-        <div><label for="password">Password<input type="password" name="password" id="password" required></label>
-        <a href="{{ url_for('auth.forget') }}">Forget</a></div>
-        <input type="submit" value="Log In">
+        <label for="password">Password<input type="password" name="password" id="password" required></label>
+
+        <input type="submit" value="Change">
     </form>
 {% endblock %}
