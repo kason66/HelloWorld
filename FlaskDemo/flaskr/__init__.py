@@ -2,7 +2,7 @@ import os
 from datetime import timedelta
 
 from flask import Flask
-from werkzeug.middleware.shared_data import SharedDataMiddleware
+
 
 
 def create_app(test_config=None):  # 应用工厂函数
@@ -65,6 +65,7 @@ def create_app(test_config=None):  # 应用工厂函数
     app.register_blueprint(blog.bp)
     # Set this to True and the rule will never match but will create a URL that can be build.
     app.add_url_rule('/uploads/<filename>', endpoint='show_photo', build_only=True)
+    from werkzeug.middleware.shared_data import SharedDataMiddleware
     # One can also mount files on the root folder and still continue to use the application because the shared data
     # middleware forwards all unhandled requests to the application,
     # even if the requests are below one of the shared folders.
