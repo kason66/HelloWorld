@@ -4,7 +4,6 @@ from datetime import timedelta
 from flask import Flask
 
 
-
 def create_app(test_config=None):  # 应用工厂函数
     # create and configure the app
     # __name__是当前Python模块的名称，告诉应用当前工作路径
