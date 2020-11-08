@@ -14,7 +14,7 @@ bp = Blueprint('blog', __name__)
 
 @bp.route('/')
 def index():
-    print_url()
+    # print_url()
     # 如果是分页查询则从session中查询出其他筛选条件
     if request.args.get('page'):
         page = int(request.args.get('page'))
@@ -120,7 +120,9 @@ def detail(pid):
     post = Post.get_post(pid, False)
     if post:
         tags = Tag.get_tags()
-        img = get_db_session().query(Img).filter(Img.id == int(post['imgs'])).one()
+        img = None
+        if post['imgs']:
+            img = get_db_session().query(Img).filter(Img.id == int(post['imgs'])).one()
         return render_template('blog/detail.html', post=post, tags=tags, img_show=img)
     else:
         return redirect(url_for('blog.index'))

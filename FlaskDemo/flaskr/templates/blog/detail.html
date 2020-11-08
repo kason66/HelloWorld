@@ -20,13 +20,14 @@
     <form method="post" onsubmit="return false;">
         <p class="title"> {{ post['title'] }} <span class="about">{{ post['created']|tojson|toLocaleString }}</span></p>
         <p class="body"> {{ post['body'] }} </p>
-
-        {% for img in post['imgs'].split(',') if img_show %}
-        <div class="img-box" id="{{img}}">
-            <img src="{{url_for('blog.show_photo',filename=img_show.name)}}"></img>
-            <span>{{ img_show.name }}</span>
-        </div>
-        {% endfor %}
+        {% if img_show %}
+            {% for img in post['imgs'].split(',')  %}
+            <div class="img-box" id="{{img}}">
+                <img src="{{url_for('blog.show_photo',filename=img_show.name)}}"></img>
+                <span>{{ img_show.name }}</span>
+            </div>
+            {% endfor %}
+        {% endif %}
         {{ show_footer(post, tags) }}
     </form>
     {{ to_comment(post) }}
