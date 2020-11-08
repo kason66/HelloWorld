@@ -34,43 +34,46 @@ def index():
     # from flaskr.models.Users import get_users_say
     # get_users_say()
 
+    # posts = Post.get_posts(search, tag_id)
     posts = Post.get_posts_sa(search, tag_id, page, 5)
-    from .models.Comments import Comment
-    comments = Comment.get_comments()
-    tags = Tag.get_tags()
-    new_posts = []
-    for i, post in enumerate(posts.items):
-        if post.imgs:
-            img = get_db_session().query(Img).filter(Img.id == int(post.imgs)).one()
-        else:
-            img = None
-
-        new_post = {
-            "id": post.id,
-            "title": post.title,
-            "author_id": post.author_id,
-            "body": post.body,
-            "tags_id": post.tags_id,
-            "created": post.created,
-            "imgs": img,
-            "username": post.username,
-            "f_author_id": post.f_author_id
-        }
-        new_posts.append(new_post)
 
     if posts is None:
-        error = 'No any post, Please new one.'
-
-    if error is not None:
+        error = 'No any post, Please register and post one.'
         flash(error)
-    context = {
-        "posts": new_posts,
-        "comments": comments,
-        "tags": tags,
-        "pagination": posts,
-        "search": search
-    }
-    return render_template('blog/index.html', **context)
+    else:
+        from .models.Comments import Comment
+        comments = Comment.get_comments()
+        tags = Tag.get_tags()
+        new_posts = []
+
+        for i, post in enumerate(posts.items):
+            if post.imgs:
+                img = get_db_session().query(Img).filter(Img.id == int(post.imgs)).one()
+            else:
+                img = None
+
+            new_post = {
+                "id": post.id,
+                "title": post.title,
+                "author_id": post.author_id,
+                "body": post.body,
+                "tags_id": post.tags_id,
+                "created": post.created,
+                "imgs": img,
+                "username": post.username,
+                "f_author_id": post.f_author_id
+            }
+            new_posts.append(new_post)
+
+        context = {
+            "posts": new_posts,
+            "comments": comments,
+            "tags": tags,
+            "pagination": posts,
+            "search": search
+        }
+        return render_template('blog/index.html', **context)
+    return render_template('auth/register.html')
 
 
 @bp.route('/create', methods=('GET', 'POST'))

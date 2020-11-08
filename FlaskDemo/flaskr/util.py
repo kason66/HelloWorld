@@ -5,6 +5,10 @@ from flask import request, current_app, flash
 from werkzeug.utils import redirect
 
 
+def print_object(obj):
+    print("obj:{}\ntype of obj:{}".format(obj, type(obj)))
+
+
 def print_url():
     """
     print the referrer , the url , the base_url , the script_root of request.

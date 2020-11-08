@@ -144,8 +144,9 @@ class Post(Base):
             else:
                 posts = get_db_session().query(
                     Post.id, Post.title, Post.body, Post.created, Post.author_id, Post.tags.label('tags_id'), Post.imgs,
-                    User.username).join(User, Post.author_id == User.id).filter(Post.title.like('%' + search + '%')). \
-                    order_by(Post.created.desc()).paginate(page, per_page)
+                    User.username, Favour.author_id.label('f_author_id')).join(User, Post.author_id == User.id).\
+                    outerjoin(Favour, and_(Favour.post_id == Post.id, Favour.author_id == 0)).\
+                    filter(Post.title.like('%' + search + '%')).order_by(Post.created.desc()).paginate(page, per_page)
                 return posts
         elif search is None and tags_id:
             if g.user:
@@ -158,8 +159,9 @@ class Post(Base):
             else:
                 posts = get_db_session().query(
                     Post.id, Post.title, Post.body, Post.created, Post.author_id, Post.tags.label('tags_id'), Post.imgs,
-                    User.username).join(User, Post.author_id == User.id).filter(Post.tags.like('%'+tags_id+'%')).\
-                    order_by(Post.created.desc()).paginate(page, per_page)
+                    User.username, Favour.author_id.label('f_author_id')).join(User, Post.author_id == User.id).\
+                    outerjoin(Favour, and_(Favour.post_id == Post.id, Favour.author_id == 0)).\
+                    filter(Post.tags.like('%'+tags_id+'%')).order_by(Post.created.desc()).paginate(page, per_page)
                 return posts
         elif search is None and tags_id is None:
             if g.user:
@@ -174,8 +176,9 @@ class Post(Base):
             else:
                 posts = get_db_session().query(
                     Post.id, Post.title, Post.body, Post.created, Post.author_id, Post.tags.label('tags_id'), Post.imgs,
-                    User.username).join(User, Post.author_id == User.id).order_by(Post.created.desc()).\
-                    paginate(page, per_page)
+                    User.username, Favour.author_id.label('f_author_id')).join(User, Post.author_id == User.id). \
+                    outerjoin(Favour, and_(Favour.post_id == Post.id, Favour.author_id == 0)). \
+                    order_by(Post.created.desc()).paginate(page, per_page)
                 return posts
         else:
             pass

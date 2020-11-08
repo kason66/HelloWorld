@@ -1,4 +1,4 @@
-.content header form {margin:0; flex-direction: row; align-items: center;}
+.content header form {flex-direction: row; align-items: center;}
 .content header form label {margin: 0rem; font-weight: normal; font-size: 1rem; color: #333;}
 .content header form input[id='title_search'] {margin: 0rem 0.2rem; width: 16rem;}
 
