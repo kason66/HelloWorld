@@ -1,8 +1,9 @@
---DROP TABLE IF EXISTS user;
---DROP TABLE IF EXISTS post;
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS post;
 DROP table IF EXISTS favours;
 DROP table IF EXISTS comments;
 DROP table IF EXISTS tags;
+DROP table IF EXISTS imgs;
 
 CREATE TABLE user (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -60,4 +61,4 @@ insert into tags (name) values ("study");
 insert into tags (name) values ("work");
 insert into tags (name) values ("other");
 
-commit ;
+--commit ;

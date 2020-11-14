@@ -170,8 +170,8 @@ class Post(Base):
                     User.username, Favour.author_id.label('f_author_id')).join(User, Post.author_id == User.id). \
                     outerjoin(Favour, and_(Favour.post_id == Post.id, Favour.author_id == g.user['id'])). \
                     order_by(Post.created.desc()).paginate(page, per_page)
-                for post in posts.items:
-                    print(post)
+                # for post in posts.items:
+                #     print(post)
                 return posts
             else:
                 posts = get_db_session().query(

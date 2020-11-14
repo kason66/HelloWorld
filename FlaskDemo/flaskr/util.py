@@ -50,7 +50,7 @@ def upload_save(files=None, url=None):
         filename = ''.join(str(uuid.uuid1()).split('-')) + '.' + file_ext
         file_url = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
         file.save(file_url)
-        return file.filename, file_url
+        return filename, file_url
     else:
         flash('The type of file should be in {}'.format(current_app.config['ALLOWED_EXT']))
         return redirect(url)

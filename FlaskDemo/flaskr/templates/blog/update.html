@@ -15,12 +15,14 @@
     <textarea name="body" id="body">{{ request.form['body'] or post['body'] }}</textarea>
     {{ update_tags(post, tags) }}
     <input type="file" name="file">
-    {% for img in post['imgs'].split(',') if img_show %}
-    <div class="img-box" id="{{img}}">
-        <img src="{{url_for('blog.show_photo',filename=img_show.name)}}"></img>
-        <span>{{ img_show.name }}</span>
-    </div>
-    {% endfor %}
+    {% if img_show  %}
+      {% for img in post['imgs'].split(',') %}
+      <div class="img-box" id="{{img}}">
+          <img src="{{url_for('blog.show_photo',filename=img_show.name)}}"></img>
+          <span>{{ img_show.name }}</span>
+      </div>
+      {% endfor %}
+    {% endif %}
     <input type="submit" value="Save">
   </form>
   <hr>

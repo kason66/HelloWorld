@@ -45,6 +45,10 @@ def create_app(test_config=None):  # 应用工厂函数
         os.makedirs(app.instance_path)
     except OSError:
         pass
+    try:
+        os.makedirs(app.config['UPLOAD_FOLDER'])
+    except OSError:
+        pass
 
     # a simple page that say hello
     @app.route('/hello')

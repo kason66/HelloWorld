@@ -6,7 +6,7 @@ from flask import (
 from werkzeug.security import check_password_hash
 
 from .models.Users import User
-from .util import print_url
+# from .util import print_url
 
 # 创建名为auth的蓝图,url前缀为/auth
 bp = Blueprint('auth', __name__, url_prefix='/auth')
@@ -20,7 +20,7 @@ def register():
         error = None
 
         # 验证用户名和密码是否为空
-        if not user.name:
+        if not user.username:
             error = 'Username is required.'
         elif not user.password:
             error = 'Password is required.'
@@ -114,7 +114,7 @@ def logout():
 def login_required(view):
     @functools.wraps(view)
     def wrapped_view(**kwargs):
-        print_url()
+        # print_url()
         if g.user is None:
             session['redirect'] = request.path
             # 未登陆重定向前保存Post请求的json格式参数(如果有)

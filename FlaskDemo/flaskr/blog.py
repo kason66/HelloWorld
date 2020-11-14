@@ -1,13 +1,16 @@
+import os
+
 from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for,
     jsonify, json, session, current_app, send_from_directory)
+from werkzeug.utils import secure_filename
 
 from flaskr.auth import login_required
 from .db import get_db_session
 from .models.Imgs import Img
 from .models.Posts import Post
 from .models.Tags import Tag
-from .util import print_url, upload_save
+from .util import print_url, upload_save, allowed_file
 
 bp = Blueprint('blog', __name__)
 
@@ -121,6 +124,7 @@ def detail(pid):
     if post:
         tags = Tag.get_tags()
         img = None
+        # 如果post有图片则查询出图片对象，以便模板中使用
         if post['imgs']:
             img = get_db_session().query(Img).filter(Img.id == int(post['imgs'])).one()
         return render_template('blog/detail.html', post=post, tags=tags, img_show=img)
@@ -135,13 +139,16 @@ def update(pid):
 
     if post:
         tags = Tag.get_tags()
-        img = get_db_session().query(Img).filter(Img.id == int(post['imgs'])).one()
+        img = None
+        # 如果post有图片则查询出图片对象，以便模板中使用
+        if post['imgs']:
+            img = get_db_session().query(Img).filter(Img.id == int(post['imgs'])).one()
         if request.method.upper() == 'POST':
             new_tags = []
             for tag in tags:
                 if request.values.get(tag['name']):
                     new_tags.append(request.values.get(tag['name']))
-            post = Post(g.user['id'], request.form['title'], request.form['body'], ','.join(new_tags))
+            post = Post(g.user['id'], request.form['title'], request.form['body'], ','.join(new_tags), ','.join(post['imgs']))
             error = None
 
             if not post.title:
@@ -155,6 +162,8 @@ def update(pid):
 
         return render_template('blog/update.html', post=post, tags=tags, img_show=img)
     else:
+        error = 'Sorry , the post is lost.'
+        flash(error)
         return redirect(url_for('blog.index'))
 
 
@@ -252,21 +261,21 @@ def comment_add():
     return jsonify({"error": error})
 
 
-# @bp.route('/upload', methods=('POST', 'GET'))
-# def upload_file():
-#     if request.method.upper() == 'POST':
-#         if 'file' in request.files:
-#             flash('No file part.')
-#             return redirect(request.url)
-#         file = request.files['file']
-#         if file.filename == '':
-#             flash('No file selected.')
-#             return redirect(request.url)
-#         if file and allowed_file(file.filename):
-#             filename = secure_filename(file.filename)
-#             file.save(os.path.join(current_app.config['UPLOAD_FOLDER']), filename)
-#             return redirect(url_for('show_photo', filename=filename))
-#     pass
+@bp.route('/upload', methods=('POST', 'GET'))
+def upload_file():
+    if request.method.upper() == 'POST':
+        if 'file' not in request.files:
+            flash('No file part.')
+            return redirect(request.url)
+        file = request.files['file']
+        if file.filename == '':
+            flash('No file selected.')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(current_app.config['UPLOAD_FOLDER']), filename)
+            return redirect(url_for('show_photo', filename=filename))
+    pass
 
 
 @bp.route('/show_photo/<filename>')

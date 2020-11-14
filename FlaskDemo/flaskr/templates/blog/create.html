@@ -17,7 +17,24 @@
     <label for="body">Body</label>
     <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
     {{ select_tags() }}
-    <input type="file" name="file">
+    <input type="file" name="file" id="file" onchange="imgSelected(this.files);">
+    <img src="" id="pre_img" alt="上传出错" height="80" width="80"></img>
+    <script type="text/javascript">
+    window.URL = window.URL || window.webkitURL;
+    var pre_img = document.getElementById("pre_img");
+    function imgSelected(files){
+      if(files.length){
+        // var img = document.createElement("img");
+        var objURL = window.URL.createObjectURL(files[0]);
+        pre_img.src = objURL;
+        /*
+        pre_img.onload = = function() {
+          window.URL.revokeObjectURL(this.src);
+          }
+          */
+      }
+    }
+    </script>
     <input type="submit" value="Save">
   </form>
 {% endblock %}
