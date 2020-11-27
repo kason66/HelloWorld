@@ -42,7 +42,7 @@ nav ul li a, nav ul li span, header .action { display: block; padding: 0.5rem; }
 }
 
 .img-box {
-    height: 10rem;
+    /*height: 10rem;*/
     width: 10rem;
 }
 .img-box img {
