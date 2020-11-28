@@ -11,7 +11,7 @@
 {% block content %}
     <form method="post">
         <label for="username">用户名<input name="username" id="username" required></label>
-        <div><label for="password">密  码<input type="password" name="password" id="password" required></label>
+        <div><label for="password">密    码<input type="password" name="password" id="password" required></label>
         <a href="{{ url_for('auth.forget') }}">忘记密码</a></div>
         <input type="submit" value="登录">
     </form>
