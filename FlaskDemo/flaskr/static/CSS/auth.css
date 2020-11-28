@@ -23,6 +23,7 @@
 
 .content a {
     position: absolute;
+    width: fit-content;
     font-size: 14px;
     top: 0.2rem;
     margin-left: 0.4rem;

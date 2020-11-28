@@ -19,10 +19,10 @@
     <label for="title_search" >标题:</label>
     <input id="title_search" name="search" type="search" value="{{ request.args.get('search') or search if search else '' }}"
            autofocus="autofocus" placeholder="请输入标题进行搜索" >
-    <input type="submit" value="Search">
+    <input type="submit" value="搜索">
     </form>
   {%- if g.user %}
-    <a class="action" href="{{ url_for('blog.create') }}">New</a>
+    <a class="action" href="{{ url_for('blog.create') }}">创建</a>
   {% endif -%}
 {% endblock -%}
 

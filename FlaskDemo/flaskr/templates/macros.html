@@ -20,9 +20,9 @@
         {%endfor%}
  
         {%if pagination.has_next%}
-        <li class="page-item"><a class="page-link" href="{{url_for(url,page=pagination.page+1)}}">后一页</a></li>
+        <li class="page-item"><a class="page-link" href="{{url_for(url,page=pagination.page+1)}}">下一页</a></li>
         {%else%}
-        <li class="page-item disabled"><span class="page-link">next</span></li>
+        <li class="page-item disabled"><span class="page-link">下一页</span></li>
         {%endif%}
  
     </ul>
