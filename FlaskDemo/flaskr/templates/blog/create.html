@@ -6,15 +6,15 @@
 {%- endblock -%}
 
 {% block header %}
-  <h1>{% block title %}New Post{% endblock %}</h1>
-  <a class="action" href="{{ url_for('blog.index') }}">Return</a>
+  <h1>{% block title %}创建{% endblock %}</h1>
+  <a class="action" href="{{ url_for('blog.index') }}">返回</a>
 {% endblock %}
 
 {% block content %}
   <form method="post" enctype="multipart/form-data">
-    <label for="title">Title</label>
+    <label for="title">标题</label>
     <input name="title" id="title" value="{{ request.form['title'] }}" autofocus="autofocus" required >
-    <label for="body">Body</label>
+    <label for="body">内容</label>
     <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
     {{ select_tags() }}
     <input type="file" name="file" id="file" onchange="imgSelected(this.files);">

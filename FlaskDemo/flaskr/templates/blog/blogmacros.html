@@ -1,5 +1,5 @@
 {% macro select_tags() -%}
-<span class="tag" >Tags:
+<span class="tag" >标签:
   {%- for tag in tags if tags %}
 <label class="tag" for="{{tag['id']}}">
     <input name="{{tag['name']}}" id="{{tag['id']}}" type="checkbox" value="{{tag['id']}}">
@@ -10,7 +10,7 @@
 {%- endmacro  %}
 
 {% macro update_tags(post, tags) -%}
-<span class="tag" >Tags:
+<span class="tag" >标签:
   {%- for tag in tags -%}
 <label class="tag" for="{{tag['id']}}">
     {%- for tag_id in post['tags_id'].split(',') if post['tags_id'] and tag['id'] == tag_id|int -%}
@@ -25,13 +25,13 @@
 {%- endmacro %}
 
 {% macro show_tags(post, tags) -%}
-<span class="tag f_tag">Tags:</span>
+<span class="tag f_tag">标签:</span>
   {%- for tag_id in post['tags_id'].split(',') if post['tags_id'] -%}
       {%- for tag in tags if tag['id'] == tag_id|int -%}
 <span class="tag f_tag" >#{{tag['name']}}</span>
       {%- endfor -%}
   {% else -%}
-<span class="tag f_tag">no tag</span>
+<span class="tag f_tag">无标签</span>
   {%- endfor -%}
 {%- endmacro %}
 
@@ -42,11 +42,11 @@
         {%- endif -%}
 <!--        采用js原生的XMLHttpRequest发送Post请求，进行局部更新，数据传输少-->
 <span  id="like{{ post['id'] }}" class="{{like_class}}"
-            onclick="doFavour('post','{{ url_for('blog.dofavour_js') }}',{{ post['id'] }})">Like</span>
+            onclick="doFavour('post','{{ url_for('blog.dofavour_js') }}',{{ post['id'] }})">点赞</span>
 <!--        采用a标签发送Get请求，进行页面全局更新，数据传输大-->
 <!--      <a class="{{like_class}}" href="{{ url_for('blog.dofavour',pid=post['id'],op='unLike') }}">Like</a>-->
     {%- endwith -%}
-<span  class="comment_icon" onclick="toComment('{{ post['id'] }}')">Comment</span>
+<span  class="comment_icon" onclick="toComment('{{ post['id'] }}')">评论</span>
 {%- endmacro %}
 
 {% macro show_footer(post, tags) %}
@@ -60,7 +60,7 @@
     {%- if comments %}
       {% for comment in comments if comment['post_id'] == post['id'] %}
         {% if loop.first %}
-    <div class="comments">Comments:</div>
+    <div class="comments">评论:</div>
         {% endif %}
     <div id="comment{{ comment['id'] }}" class="comment">
         <div class="comment_about" >by {{comment['username']}} on {{comment['createdTime']|tojson|toLocaleString }}</div>

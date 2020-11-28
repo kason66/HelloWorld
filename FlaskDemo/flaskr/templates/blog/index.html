@@ -14,11 +14,11 @@
 {%- endblock -%}
 
 {%- block header %}
-    <h1>{% block title %}Posts{% endblock %}</h1>
+    <h1>{% block title %}主页{% endblock %}</h1>
     <form>
-    <label for="title_search" >Title:</label>
+    <label for="title_search" >标题:</label>
     <input id="title_search" name="search" type="search" value="{{ request.args.get('search') or search if search else '' }}"
-           autofocus="autofocus" placeholder="title of post to search" >
+           autofocus="autofocus" placeholder="请输入标题进行搜索" >
     <input type="submit" value="Search">
     </form>
   {%- if g.user %}
@@ -28,7 +28,7 @@
 
 {%- block content %}
     <div class="tags">
-        <span class="tag">Tags:</span>
+        <span class="tag">标签:</span>
         {%- for tag in tags if tags %}
         <a class="tag" href="{{ url_for('blog.index', tag_id=tag['id']) }}">#{{tag['name']}}</a>
         {% endfor-%}
@@ -43,7 +43,7 @@
     {#            <div class="about"> by {{ post['username'] }} on <script >document.write(new Date({{ post['created']|tojson }}).toLocaleString());</script>  or {{ post['created'] }}</div> #}
               </div>
               {%- if g.user['id'] == post['author_id'] -%}
-                <a class="action" href="{{ url_for('blog.update', pid=post['id']) }}">Edit</a>
+                <a class="action" href="{{ url_for('blog.update', pid=post['id']) }}">编辑</a>
               {%- endif -%}
             </header>
 
