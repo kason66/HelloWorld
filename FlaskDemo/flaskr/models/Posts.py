@@ -63,11 +63,11 @@ class Post(Base):
         post = get_db().execute(sql, (post_id, g.user['id'])).fetchone()
 
         if post is None:
-            flash(error="Post id {0} doesn't exist.".format(post_id))
+            flash("Post id {0} doesn't exist.".format(post_id))
             return False
 
         if check_author and post['author_id'] != g.user['id']:
-            flash(error="You have not the permission.")
+            flash("You have not the permission.")
             return False
 
         return post

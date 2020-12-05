@@ -95,7 +95,7 @@ function doComment(method, url, pid){
                 div_com_about.innerHTML = comment_about;
                 p_com_body.setAttribute('class','comment_body');
                 p_com_body.innerHTML = result.comment['comment'];
-                div_comment.appendChild(div_com_title);
+                div_comment.appendChild(div_com_about);
                 div_comment.appendChild(p_com_body);
 
                 formComment.parentNode.insertBefore(div_comment,formComment);

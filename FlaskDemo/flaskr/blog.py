@@ -191,7 +191,7 @@ def dofavour(pid, op):
     return redirect(url_for('blog.index'))
 
 
-@bp.route('/dofavour', methods=('GET', 'POST'))
+@bp.route('/dofavour_js', methods=('GET', 'POST'))
 @login_required
 def dofavour_js():
     # 处理XMLHttpRequest的Post请求更新页面局部和未登陆重定向的Get请求
@@ -203,10 +203,6 @@ def dofavour_js():
             data = json.loads(request.data)
             pid = data['pid']
             op = data['op']
-
-    elif session.get('redirect'):
-        pid = session.get('pid')
-        op = session.get('op')
 
     error = None
     result = ""
@@ -232,8 +228,10 @@ def dofavour_js():
         error = "The post id {} is not found.".format(pid)
 
     # 如果是重定向，返回博客首页
-    if session.get('redirect'):
+    if session.get('before_request_path') and session.get('pid'):
         # session.pop('redirect', None)
+        if error is not None:
+            flash(error, 'error')
         return redirect(url_for('blog.index'))
     else:
         return jsonify({"favour": result, "error": error})

@@ -1,8 +1,18 @@
-
+// 创建一个全局xhttp对象，将XMLHttpRequest对象及其方法进行封装
 var xhttp = {};
 
 xhttp.quest = function(option, callback){
-    var xhr = new XMLHttpRequest();
+    var xhr;
+    if (window.XMLHttpRequest)
+    {
+        //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xhr=new XMLHttpRequest();
+    }
+    else
+    {
+        // IE6, IE5 浏览器执行代码
+        xhr=new ActiveXObject("Microsoft.XMLHTTP");
+    }
 
     xhr.onreadystatechange = function(){
         if(xhr.readyState == 4){

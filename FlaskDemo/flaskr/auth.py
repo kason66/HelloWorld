@@ -53,15 +53,7 @@ def login():
             error = 'Incorrect password.'
 
         if error is None:
-            re_path = False
-            if session.get('redirect'):
-                re_path = session.get('redirect')
-            else:
-                session.clear()
             session['user_id'] = user['id']
-            if re_path:
-                print('get in redirect and url is {}'.format(request.url_root.rstrip('/') + re_path))
-                return redirect(re_path)
             return redirect(url_for('blog.index'))
 
         flash(error)
@@ -116,16 +108,18 @@ def login_required(view):
     def wrapped_view(**kwargs):
         # print_url()
         if g.user is None:
-            session['redirect'] = request.path
+            session['before_request_path'] = request.path
             # 未登陆重定向前保存Post请求的json格式参数(如果有)
             if len(request.data) != 0:
                 for k, v in json.loads(request.data).items():
                     session[k] = v
-            # 如果是HttpXMLRequest请求
+            # 如果是HttpXMLRequest请求,返回给前端首页URL地址前进行JSON格式化
             if request.environ.get('HTTP_XHR') in ("True",):
                 return jsonify({"url": url_for('auth.login')})
             else:
                 return redirect(url_for('auth.login'))
+        elif session.get("before_request_path"):
+            session.pop("before_request_path")
         return view(**kwargs)
     return wrapped_view
 
