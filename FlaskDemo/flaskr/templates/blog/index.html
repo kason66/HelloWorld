@@ -2,15 +2,18 @@
 {% from 'blog/blogmacros.html' import show_footer, comments_html, to_comment %}
 {% from 'macros.html' import paginate_html %}
 
+{% block metas -%}
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+{%- endblock %}
 {%- block style -%}
-        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/index.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/footer.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/pagination.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/pagination.css') }}">
 {%- endblock -%}
 
 {%- block script -%}
-        <script src="{{ url_for('static',filename='JS/xhrutil.js') }}"></script>
-        <script src="{{ url_for('static',filename='JS/footer.js') }}"></script>
+    <script src="{{ url_for('static',filename='JS/xhrutil.js') }}"></script>
+    <script src="{{ url_for('static',filename='JS/footer.js') }}"></script>
 {%- endblock -%}
 
 {%- block header %}
