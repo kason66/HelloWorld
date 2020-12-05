@@ -73,6 +73,6 @@
 {% macro to_comment(post) %}
 <form class="to_comment{{ post['id'] }}" method="post" style="display: None;" >
     <textarea id="to_comment" name="comment" onblur="toComment('{{ post['id'] }}')" required></textarea>
-    <input type="button" value="Send" onmousedown="doComment('post','{{ url_for('blog.comment_add') }}',{{ post['id'] }})">
+    <input type="button" value="发送" onmousedown="doComment('post','{{ url_for('blog.comment_add') }}',{{ post['id'] }})">
 </form>
 {% endmacro %}

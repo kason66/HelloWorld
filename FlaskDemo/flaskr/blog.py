@@ -254,7 +254,10 @@ def comment_add():
 
         if error is None:
             comment.insert()
-            return jsonify({"comment": comment.get_comment()})
+            comment = comment.get_comment()
+            from .models.Users import User
+            comment['username'] = User.get_users(g.user['id'])['username']
+            return jsonify({"comment": comment})
 
     return jsonify({"error": error})
 

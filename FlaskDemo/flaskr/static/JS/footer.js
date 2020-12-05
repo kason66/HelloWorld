@@ -83,14 +83,6 @@ function doComment(method, url, pid){
                 div_comment.setAttribute('class','comment');
                 div_comment.setAttribute('id','comment'+result.comment['id']);
                 div_com_about.setAttribute('class','comment_about');
-//                result.comment['createdTime'] = new Date(result.comment['createdTime']).toLocaleString();
-//                console.log(result.comment['createdTime']);
-//                console.log(new Date(result.comment['createdTime']).getTimezoneOffset());
-//                console.log(new Date(result.comment['createdTime']).toLocaleString());
-//                console.log(new Date(result.comment['createdTime']).toLocaleTimeString());
-//                console.log(new Date(result.comment['createdTime']).toTimeString());
-//                console.log(new Date(result.comment['createdTime']).toString());
-//                console.log(new Date(result.comment['createdTime']).getTime());
                 var comment_about = 'by '+result.comment['username']+' on '+new Date(result.comment['createdTime']).toLocaleString();
                 div_com_about.innerHTML = comment_about;
                 p_com_body.setAttribute('class','comment_body');
