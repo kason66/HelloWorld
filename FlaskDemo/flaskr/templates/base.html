@@ -37,11 +37,13 @@
         <script>new Date().getFullYear()>2020&&document.write("-"+new Date().getFullYear());</script>
         Xiaolige. All Rights Reserved.
     </div>
-    <div style="width:300px;margin:0 auto; padding:10px 0 20px;">
-    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102004241"
-       style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+    <div style="width:max-content; margin:0 auto; padding:10px 0 20px;">
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102004241">
         <img src="{{ url_for('static', filename='备案图标.png') }}" style="float:left;"/>
-        <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">鄂公网安备 42011102004241号</p>
+        <p style="float:left;height:20px;line-height:20px;margin: 0px 5px 0px 5px; color:#939393;">鄂公网安备 42011102004241号</p>
+    </a>
+    <a href="https://beian.miit.gov.cn/#/Integrated/recordQuery" target="_blank">
+        <p style="float:left;height:20px;line-height:20px;margin: 0px 5px 0px 5px; color:#939393;">鄂ICP备2020021068号-1</p>
     </a>
 </div>
 {%- block myScript %}{%- endblock -%}
